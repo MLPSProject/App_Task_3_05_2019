@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Asp_Shopping_MasterPage.master.cs" Inherits="Asp_shopping_websiteDesign.Asp_Shopping_MasterPage" %>
+
+<%@ Register Src="~/Asp_Shopping_Header.ascx" TagPrefix="uc1" TagName="Asp_Shopping_Header" %>
+<%@ Register Src="~/Asp_Shopping_Footer.ascx" TagPrefix="uc1" TagName="Asp_Shopping_Footer" %>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+    <style>
+        .container1{
+            height:1250px;
+            width:100%;
+        }
+
+        .header{
+            height:150px;
+            width:100%;
+        }
+
+        .content{
+            height:1000px;
+        }
+
+        .footer{
+            height:100px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container1">
+            <div class="header">
+                <uc1:Asp_Shopping_Header runat="server" id="Asp_Shopping_Header" />
+            </div>
+
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div class="footer">
+                <uc1:Asp_Shopping_Footer runat="server" id="Asp_Shopping_Footer" />
+            </div>
+
+        </div>
+        
+    </form>
+</body>
+</html>
